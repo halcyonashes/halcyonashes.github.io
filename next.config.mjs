@@ -3,6 +3,9 @@ const nextConfig = {
     output: 'export',
     basePath: '/halcyonashes',
     assetPrefix: '/halcyonashes/',
+    images: {
+      unoptimized: true,
+    },
   };
   
   export default nextConfig;
