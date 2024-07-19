@@ -25,7 +25,7 @@ Proficiency in: Kotlin, Java, Flutter, and Android SDK for Application Developme
 `• Worked closely with a stakeholder to develop and maintain data auditing application used for healthcare research.
 • Chat application using an open-source platform (RocketChat).
 • Published multiple entrance examination preparation applications to the Play Store.`,
-        years: "01/2019 - 2020"
+        years: "01/2019 - 04/2020"
       },
       job4: {
         title: "Android Developer",

@@ -27,8 +27,14 @@ body {
   background-attachment: fixed;
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-opensans);
+  font-weight: 600;
+}
+
+p, ul, li, a, span {
+  font-family: var(--font-opensans);
+  font-weight: 400; 
 }
 
 

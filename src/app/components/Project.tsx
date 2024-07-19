@@ -3,6 +3,8 @@
 import { Project as ProjectType } from "../data/project";
 import { useState } from "react";
 import Image from 'next/image'
+import { FaChevronDown } from 'react-icons/fa';
+
 
 interface ProjectProps {
   project: ProjectType;
@@ -18,7 +20,6 @@ const getGridCols = (count: number): number => {
 };
 
 const Project = ({ project, isExpanded, onClick }: ProjectProps) => {
-  // Example of using local state within Project component
   const [localState, setLocalState] = useState<boolean>(false);
 
   return (
@@ -26,37 +27,39 @@ const Project = ({ project, isExpanded, onClick }: ProjectProps) => {
       className="border p-3 rounded-lg cursor-pointer transition-shadow duration-300 ease-in-out transform hover:shadow-lg"
       onClick={onClick}
     >
-      <h3 className="text-lg font-bold">{project.title}</h3>
+      <div className="flex items-center justify-between">
+        <h3 className="text-lg font-medium">{project.title}</h3>
+        <FaChevronDown className="text-lg" />
+      </div>
       {isExpanded && (
         <div className="mt-4">
-          <p>{project.description}</p>
+          <p className="font-normal">{project.description}</p>
           <div
             className="mt-4 grid gap-4"
             style={{ gridTemplateColumns: `repeat(${getGridCols(project.screenshots.length)}, minmax(0, 1fr))` }}
           >
             {project.screenshots.map((screenshot, index) => (
-              screenshot ? ( // Conditionally render based on whether the screenshot URL is non-empty
+              screenshot ? (
                 <div
                   key={index}
                   className="relative overflow-hidden rounded-lg border border-gray-100"
-                  style={{ height: 'auto' }} // Ensure height adjusts to the image
+                  style={{ height: 'auto' }}
                 >
                   <Image
                     src={screenshot}
                     alt={`Screenshot ${index + 1}`}
                     layout="responsive"
-                    width={300} // Width of the image
-                    height={400} // Height of the image
+                    width={300}
+                    height={400}
                     objectFit="cover"
                   />
                 </div>
               ) : (
                 <div
                   key={index}
-                  className="relative" // No border or content for empty screenshots
-                  style={{ height: 'auto' }} // Ensure height adjusts to the image
+                  className="relative"
+                  style={{ height: 'auto' }}
                 >
-                  {/* Empty div for spacing */}
                 </div>
               )
             ))}
