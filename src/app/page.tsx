@@ -54,7 +54,7 @@ export default function Home() {
                   <p className="whitespace-pre-wrap mx-8">{content.job2.description}</p>
                 </div>
                 <div className="text-right w-36 flex-shrink-0">
-                  <p>{content.job1.years}</p>
+                  <p>{content.job2.years}</p>
                 </div>
               </div>
             </li>
@@ -65,7 +65,7 @@ export default function Home() {
                   <p className="whitespace-pre-wrap mx-8">{content.job3.description}</p>
                 </div>
                 <div className="text-right w-36 flex-shrink-0">
-                  <p>{content.job1.years}</p>
+                  <p>{content.job3.years}</p>
                 </div>
               </div>
             </li>
@@ -76,7 +76,7 @@ export default function Home() {
                   <p className="whitespace-pre-wrap mx-8">{content.job4.description}</p>
                 </div>
                 <div className="text-right w-36 flex-shrink-0">
-                  <p>{content.job1.years}</p>
+                  <p>{content.job4.years}</p>
                 </div>
               </div>
             </li>
