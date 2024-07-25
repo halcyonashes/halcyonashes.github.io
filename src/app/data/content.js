@@ -20,7 +20,7 @@ Proficiency in: Kotlin, Java, Flutter, and Android SDK for Application Developme
       years: "11/2021-05/2023"
     },
     job3: {
-        title: "Android Developer",
+        title: "Android Developer, Sajilo Ventures",
         description: 
 `• Worked closely with a stakeholder to develop and maintain data auditing application used for healthcare research.
 • Chat application using an open-source platform (RocketChat).
@@ -28,7 +28,7 @@ Proficiency in: Kotlin, Java, Flutter, and Android SDK for Application Developme
         years: "01/2019 - 04/2020"
       },
       job4: {
-        title: "Android Developer",
+        title: "Android Developer, Longtail e-media",
         description: 
 `• Event management system and hotel management applications.
 • Implemented ExoPlayer and Calendars for a priest application.`,

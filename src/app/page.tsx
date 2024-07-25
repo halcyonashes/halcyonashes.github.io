@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Open_Sans } from "next/font/google";
 import { projects } from "./data/project";
 import Project from "./components/Project";
@@ -17,9 +17,16 @@ const openSans = Open_Sans({
 
 export default function Home() {
   const [expandedProjectId, setExpandedProjectId] = useState<number | null>(null);
+  const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  const handleProjectClick = (projectId: number) => {
-    setExpandedProjectId((prev) => (prev === projectId ? null : projectId));
+  const handleProjectClick = (projectId: number, index: number) => {
+    setExpandedProjectId((prev) => {
+      const newExpandedProjectId = prev === projectId ? null : projectId;
+      if (newExpandedProjectId !== null && projectRefs.current[index]) {
+        projectRefs.current[index]?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      return newExpandedProjectId;
+    });
   };
 
   return (
@@ -37,48 +44,32 @@ export default function Home() {
           <h2 className="text-2xl font-medium">{content.experience}</h2>
           <ul className="list-none ml-8">
             <li className="mb-4">
-              <div className="flex justify-between">
-                <div>
-                  <h3 className="font-medium">{content.job1.title}</h3>
-                  <p className="whitespace-pre-wrap mx-8 font-light">{content.job1.description}</p>
-                </div>
-                <div className="text-right w-36 flex-shrink-0">
-                  <p>{content.job1.years}</p>
-                </div>
+              <div className="job-header">
+                <h3 className="font-medium">{content.job1.title}</h3>
+                <p className="job-year">{content.job1.years}</p>
               </div>
+              <p className="whitespace-pre-wrap mx-8 font-light">{content.job1.description}</p>
             </li>
             <li className="mb-4">
-              <div className="flex justify-between flex-wrap">
-                <div className="flex-1">
-                  <h3 className="font-medium">{content.job2.title}</h3>
-                  <p className="whitespace-pre-wrap mx-8 font-light">{content.job2.description}</p>
-                </div>
-                <div className="text-right w-36 flex-shrink-0">
-                  <p>{content.job2.years}</p>
-                </div>
+              <div className="job-header">
+                <h3 className="font-medium">{content.job2.title}</h3>
+                <p className="job-year">{content.job2.years}</p>
               </div>
+              <p className="whitespace-pre-wrap mx-8 font-light">{content.job2.description}</p>
             </li>
             <li className="mb-4">
-              <div className="flex justify-between flex-wrap">
-                <div className="flex-1">
-                  <h3 className="font-medium">{content.job3.title}</h3>
-                  <p className="whitespace-pre-wrap mx-8 font-light">{content.job3.description}</p>
-                </div>
-                <div className="text-right w-36 flex-shrink-0">
-                  <p>{content.job3.years}</p>
-                </div>
+              <div className="job-header">
+                <h3 className="font-medium">{content.job3.title}</h3>
+                <p className="job-year">{content.job3.years}</p>
               </div>
+              <p className="whitespace-pre-wrap mx-8 font-light">{content.job3.description}</p>
             </li>
             <li className="mb-4">
-              <div className="flex justify-between flex-wrap">
-                <div className="flex-1">
-                  <h3 className="font-medium">{content.job4.title}</h3>
-                  <p className="whitespace-pre-wrap mx-8 font-light">{content.job4.description}</p>
-                </div>
-                <div className="text-right w-36 flex-shrink-0">
-                  <p>{content.job4.years}</p>
-                </div>
+              <div className="job-header">
+                <h3 className="font-medium">{content.job4.title}</h3>
+                <p className="job-year">{content.job4.years}</p>
               </div>
+              <p className="whitespace-pre-wrap mx-8 font-light">{content.job4.description}</p>
             </li>
           </ul>
         </section>
@@ -86,12 +77,12 @@ export default function Home() {
         <section id="projects" className="mb-8">
           <h2 className="text-2xl font-medium mb-4">{content.projects}</h2>
           <div className="grid gap-4">
-            {projects.map((project) => (
+            {projects.map((project, index) => (
               <Project
                 key={project.id}
                 project={project}
                 isExpanded={expandedProjectId === project.id}
-                onClick={() => handleProjectClick(project.id)}
+                onClick={() => handleProjectClick(project.id, index)}
               />
             ))}
           </div>

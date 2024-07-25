@@ -1,8 +1,7 @@
 "use client";  
-
 import { Project as ProjectType } from "../data/project";
-import { useState } from "react";
-import Image, { ImageLoaderProps } from 'next/image'
+import { useState, forwardRef } from "react";
+import Image, { ImageLoaderProps } from 'next/image';
 import { FaChevronDown } from 'react-icons/fa';
 import { TailSpin } from 'react-loader-spinner';
 import { CSSTransition } from 'react-transition-group';
@@ -25,13 +24,14 @@ const imageLoader = ({ src, width, quality }: ImageLoaderProps): string => {
   return `/halcyonashes/images/${src}?w=${width}&q=${quality || 75}`;
 };
 
-const Project = ({ project, isExpanded, onClick }: ProjectProps) => {
+const Project = forwardRef<HTMLDivElement, ProjectProps>(({ project, isExpanded, onClick }, ref) => {
   const [localState, setLocalState] = useState<boolean>(false);
 
   return (
     <div
       className="border p-3 rounded-lg cursor-pointer transition-shadow duration-300 ease-in-out transform hover:shadow-lg"
       onClick={onClick}
+      ref={ref}
     >
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-medium">{project.title}</h3>
@@ -65,7 +65,9 @@ const Project = ({ project, isExpanded, onClick }: ProjectProps) => {
       </CSSTransition>
     </div>
   );
-};
+});
+
+Project.displayName = 'Project';
 
 const ImageWithSpinner = ({ src, index }: { src: string; index: number }) => {
   const [loading, setLoading] = useState(true);
@@ -98,6 +100,5 @@ const ImageWithSpinner = ({ src, index }: { src: string; index: number }) => {
     </div>
   );
 };
-
 
 export default Project;
