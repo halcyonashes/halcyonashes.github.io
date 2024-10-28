@@ -1,6 +1,6 @@
 "use client";  
 import { Project as ProjectType } from "../data/project";
-import { useState, forwardRef } from "react";
+import { useState, useEffect, useRef, forwardRef } from "react";
 import Image, { ImageLoaderProps } from 'next/image';
 import { FaChevronDown } from 'react-icons/fa';
 import { TailSpin } from 'react-loader-spinner';
@@ -25,13 +25,24 @@ const imageLoader = ({ src, width, quality }: ImageLoaderProps): string => {
 };
 
 const Project = forwardRef<HTMLDivElement, ProjectProps>(({ project, isExpanded, onClick }, ref) => {
+  const containerRef = useRef<HTMLDivElement>(null);
   const [localState, setLocalState] = useState<boolean>(false);
+
+  // Control scroll behavior when expanding only
+  useEffect(() => {
+    if (isExpanded && containerRef.current) {
+      const timeoutId = setTimeout(() => {
+        containerRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 350); 
+      return () => clearTimeout(timeoutId); // Cleanup the timeout
+    }
+  }, [isExpanded]);
 
   return (
     <div
       className="border p-3 rounded-lg cursor-pointer transition-shadow duration-300 ease-in-out transform hover:shadow-lg"
       onClick={onClick}
-      ref={ref}
+      ref={containerRef} // Attach container ref for scroll control
     >
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-medium">{project.title}</h3>
