@@ -8,9 +8,10 @@ Proficiency in: Kotlin, Java, Flutter, and Android SDK for Application Developme
     job1: {
       title: "Graduate Application Developer, University of Exeter",
       description: 
-`• Working on the university app using Flutter.
-• Transformed a web app that used Tailwind CSS to vanilla CSS.
-• End-to-end testing, creating technical documents for releases, demoing the product to stakeholders.
+`• Successfully delivered the the university app using Flutter.
+• Manual and end-to-end testing, creating technical documents for releases, demoing the product to stakeholders.
+• Helped deliver the MVP for attendance monitoring working closely with Product Owner and Scrum Master.
+• Refactored a web app from Tailwind CSS to vanilla CSS.
 • Worked on a 2D game using Unity for showcase in a digital conference.`,
       years: "06/2023 - Present"
     },

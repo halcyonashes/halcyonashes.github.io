@@ -40,7 +40,7 @@ export interface Project {
     {
       id: 4,
       title: "Sustain",
-      description: "The app is designed to help with a healthcare research. The app was used by 4600 health facilities but due to the sensitive nature of information, it was distributed internally.",
+      description: "The app is designed to help with a healthcare research. The app was used by 4600 health facilities but due to the sensitive nature of data involved, it was distributed internally.",
       screenshots: [],
     },
     {
