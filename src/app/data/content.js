@@ -7,32 +7,18 @@ Proficiency in: Kotlin, Java, Flutter, and Android SDK for Application Developme
     experience: "Experience",
     job1: {
       title: "Graduate Application Developer, University of Exeter",
-      description: 
-`• Successfully delivered the the university app using Flutter.
-• Manual and end-to-end testing, creating technical documents for releases, demoing the product to stakeholders.
-• Helped deliver the MVP for attendance monitoring working closely with Product Owner and Scrum Master.
-• Refactored a web app from Tailwind CSS to vanilla CSS.
-• Worked on a 2D game using Unity for showcase in a digital conference.`,
-      years: "06/2023 - Present"
+      years: "06/2023 - 01/2025"
     },
     job2: {
       title: "Dispensing Operative (Part-time), Numan Operations Limited",
-      description: "• Processing prescription data and dispensing medical supplies",
       years: "11/2021-05/2023"
     },
     job3: {
         title: "Android Developer, Sajilo Ventures",
-        description: 
-`• Worked closely with a stakeholder to develop and maintain data auditing application used for healthcare research.
-• Chat application using an open-source platform (RocketChat).
-• Published multiple entrance examination preparation applications to the Play Store.`,
         years: "01/2019 - 04/2020"
       },
       job4: {
         title: "Android Developer, Longtail e-media",
-        description: 
-`• Event management system and hotel management applications.
-• Implemented ExoPlayer and Calendars for a priest application.`,
         years: "06/2017 - 07/2018"
       },
     projects: "Projects",

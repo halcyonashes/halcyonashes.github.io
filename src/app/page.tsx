@@ -36,60 +36,54 @@ export default function Home() {
         <h1 className="text-3xl font-medium mb-8">{content.title}</h1>
 
         <section id="summary" className="mb-8">
-          <h2 className="text-2xl font-medium">{content.summary}</h2>
+          <h2 className="text-2xl font-medium mb-4">{content.summary}</h2>
           <p className="whitespace-pre-wrap font-light">{content.summaryText}</p>
         </section>
 
         <section id="experience" className="mb-8">
-          <h2 className="text-2xl font-medium">{content.experience}</h2>
+          <h2 className="text-2xl font-medium mb-4">{content.experience}</h2>
           <ul className="list-none ml-8">
             <li className="mb-4">
               <div className="job-header">
                 <h3 className="font-medium">{content.job1.title}</h3>
                 <p className="job-year">{content.job1.years}</p>
               </div>
-              <p className="whitespace-pre-wrap mx-8 font-light">{content.job1.description}</p>
             </li>
             <li className="mb-4">
               <div className="job-header">
                 <h3 className="font-medium">{content.job2.title}</h3>
                 <p className="job-year">{content.job2.years}</p>
               </div>
-              <p className="whitespace-pre-wrap mx-8 font-light">{content.job2.description}</p>
             </li>
             <li className="mb-4">
               <div className="job-header">
                 <h3 className="font-medium">{content.job3.title}</h3>
                 <p className="job-year">{content.job3.years}</p>
               </div>
-              <p className="whitespace-pre-wrap mx-8 font-light">{content.job3.description}</p>
             </li>
             <li className="mb-4">
               <div className="job-header">
                 <h3 className="font-medium">{content.job4.title}</h3>
                 <p className="job-year">{content.job4.years}</p>
               </div>
-              <p className="whitespace-pre-wrap mx-8 font-light">{content.job4.description}</p>
             </li>
           </ul>
         </section>
 
         <section id="projects" className="mb-8">
-          <h2 className="text-2xl font-medium mb-4">{content.projects}</h2>
+          <h2 className="text-2xl font-medium">{content.projects}</h2>
           <div className="grid gap-4">
             {projects.map((project, index) => (
               <Project
                 key={project.id}
                 project={project}
-                isExpanded={expandedProjectId === project.id}
-                onClick={() => handleProjectClick(project.id, index)}
               />
             ))}
           </div>
         </section>
 
         <section id="education" className="mb-8">
-          <h2 className="text-2xl font-medium">{content.education}</h2>
+          <h2 className="text-2xl font-medium mb-4">{content.education}</h2>
           <ul className="list-disc ml-8">
             <li>
               <h3 className="font-medium">{content.degree1.title}</h3>
@@ -103,12 +97,12 @@ export default function Home() {
         </section>
 
         <section id="skills" className="mb-12">
-          <h2 className="text-2xl font-medium">{content.skills}</h2>
+          <h2 className="text-2xl font-medium mb-4">{content.skills}</h2>
           <p className="font-light">{content.skillsText}</p>
         </section>
 
         <section id="languages" className="mb-8">
-          <h2 className="text-2xl font-medium">{content.languages}</h2>
+          <h2 className="text-2xl font-medium mb-4">{content.languages}</h2>
           <div className="grid grid-cols-2">
             <ul className="list-disc ml-8">
               {content.languageList1.map((language, index) => (
@@ -124,7 +118,7 @@ export default function Home() {
         </section>
 
         <section id="research-interests" className="mb-8">
-          <h2 className="text-2xl font-medium">{content.researchInterests}</h2>
+          <h2 className="text-2xl font-medium mb-4">{content.researchInterests}</h2>
           <p className="font-light">{content.researchInterestsText}</p>
         </section>
 

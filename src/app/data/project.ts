@@ -58,7 +58,12 @@ export interface Project {
       id: 6,
       title: "Karmakanda",
       description: "The app is designed to be a virtual priest and help you with rituals.",
-      screenshots: [],
+      screenshots: [
+        "/halcyonashes/images/karmakanda1.png",
+        "/halcyonashes/images/karmakanda2.png",
+        "",
+        "",
+      ],
     },
     {
       id: 7,
