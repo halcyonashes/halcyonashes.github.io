@@ -9,7 +9,7 @@ export interface Project {
     {
       id: 1,
       title: "MyExeter",
-      description: "The app to support the students throughout their university journey.",
+      description: "The app to support the students throughout their university journey. Extensively worked on login flow using AWS Cognito and Amplify, Firebase Analytics, Provider for state management, and error handling.",
       screenshots: [
         "/halcyonashes/images/myexeter1.jpg",
         "/halcyonashes/images/myexeter2.jpg",
@@ -20,7 +20,7 @@ export interface Project {
     {
       id: 2,
       title: "Wi-fi Onboarding",
-      description: "The web app helps the students connect to the university wi-fi.",
+      description: "The web app helps the students connect to the university wi-fi developed using React with TypeScript.",
       screenshots: [
         "/halcyonashes/images/wifi1.png",
         "/halcyonashes/images/wifi2.png",
@@ -29,7 +29,7 @@ export interface Project {
     {
       id: 3,
       title: "GoEntrance / Loksewa Pro/ MAN - Mathematical Association of Nepal",
-      description: "Apps where you can enroll into different courses and practice test sets and take a test.",
+      description: "Apps where you can enroll into different courses and practice test sets and take a test. Worked with charts, Room and ObjectBox for database, Android navigation components, image caching, Youtube API, and Firebase Crashlytics.",
       screenshots: [
         "/halcyonashes/images/man1.jpg",
         "/halcyonashes/images/loksewa2.jpg",
@@ -57,7 +57,7 @@ export interface Project {
     {
       id: 6,
       title: "Karmakanda",
-      description: "The app is designed to be a virtual priest and help you with rituals.",
+      description: "The app is designed to be a virtual priest and help you with rituals. Worked with SQLite, Firebase authentication, Retrofit, Exoplayer, and Calendars.",
       screenshots: [
         "/halcyonashes/images/karmakanda1.png",
         "/halcyonashes/images/karmakanda2.png",

@@ -10,17 +10,13 @@ Proficiency in: Kotlin, Java, Flutter, and Android SDK for Application Developme
       years: "06/2023 - 01/2025"
     },
     job2: {
-      title: "Dispensing Operative (Part-time), Numan Operations Limited",
-      years: "11/2021-05/2023"
-    },
-    job3: {
         title: "Android Developer, Sajilo Ventures",
         years: "01/2019 - 04/2020"
       },
-      job4: {
-        title: "Android Developer, Longtail e-media",
-        years: "06/2017 - 07/2018"
-      },
+    job3: {
+      title: "Android Developer, Longtail e-media",
+      years: "06/2017 - 07/2018"
+    },
     projects: "Projects",
     education: "Education",
     degree1: {
@@ -32,10 +28,10 @@ Proficiency in: Kotlin, Java, Flutter, and Android SDK for Application Developme
       institution: "Tribhuvan University, 2019"
     },
     skills: "Skills",
-    skillsText: "Application Development | Kotlin | Java | Flutter | Python for Data Science | SQL database management | AWS Services | C | C++ | Django | Agile methodologies | Jira | Git Version Control | Data Visualisation | ReactJS | PHP | JavaScript | CSS | HTML5 | Postman | Wordpress",
+    skillsText: "Application Development | Kotlin | Java | Flutter | Python for Data Science | SQL database management | AWS | C | C++ | Django | Agile methodologies | Jira | Git Version Control | Data Visualisation | ReactJS | PHP | JavaScript | CSS | HTML5 | Postman | Wordpress",
     languages: "Languages",
     languageList1: ["Nepali - Native", "English - Fluent", "Spanish - Beginner"],
-    languageList2: ["Newari - Native", "Hindi - Expert"],
+    languageList2: ["Newari - Native", "Hindi - Expert", "Japanese - Beginner"],
     researchInterests: "Research Interests",
     researchInterestsText: "Application Development | Natural Language Processing | Artificial Intelligence | Data Analytics",
     linkedinUrl: "https://www.linkedin.com/in/halcyonashes",
