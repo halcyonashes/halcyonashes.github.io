@@ -16,18 +16,6 @@ const openSans = Open_Sans({
 })
 
 export default function Home() {
-  const [expandedProjectId, setExpandedProjectId] = useState<number | null>(null);
-  const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  const handleProjectClick = (projectId: number, index: number) => {
-    setExpandedProjectId((prev) => {
-      const newExpandedProjectId = prev === projectId ? null : projectId;
-      if (newExpandedProjectId !== null && projectRefs.current[index]) {
-        projectRefs.current[index]?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-      return newExpandedProjectId;
-    });
-  };
 
   return (
     <div className={`relative container mt-8 mb-8 mx-auto p-8 ${openSans.variable}`}>
