@@ -11,9 +11,9 @@ export interface Project {
       title: "MyExeter",
       description: "The app to support the students throughout their university journey. Extensively worked on login flow using AWS Cognito and Amplify, Firebase Analytics, Provider for state management, and error handling.",
       screenshots: [
-        "/halcyonashes/images/myexeter1.jpg",
-        "/halcyonashes/images/myexeter2.jpg",
-        "/halcyonashes/images/myexeter3.jpg",
+        "/images/myexeter1.jpg",
+        "/images/myexeter2.jpg",
+        "/images/myexeter3.jpg",
         "",
       ],
     },
@@ -22,8 +22,8 @@ export interface Project {
       title: "Wi-fi Onboarding",
       description: "The web app helps the students connect to the university wi-fi developed using React with TypeScript.",
       screenshots: [
-        "/halcyonashes/images/wifi1.png",
-        "/halcyonashes/images/wifi2.png",
+        "/images/wifi1.png",
+        "/images/wifi2.png",
       ],
     },
     {
@@ -31,10 +31,10 @@ export interface Project {
       title: "GoEntrance / Loksewa Pro/ MAN - Mathematical Association of Nepal",
       description: "Apps where you can enroll into different courses and practice test sets and take a test. Worked with charts, Room and ObjectBox for database, Android navigation components, image caching, Youtube API, and Firebase Crashlytics.",
       screenshots: [
-        "/halcyonashes/images/man1.jpg",
-        "/halcyonashes/images/loksewa2.jpg",
-        "/halcyonashes/images/loksewa1.jpg",
-        "/halcyonashes/images/goentrance1.jpg",
+        "/images/man1.jpg",
+        "/images/loksewa2.jpg",
+        "/images/loksewa1.jpg",
+        "/images/goentrance1.jpg",
       ],
     },
     {
@@ -48,8 +48,8 @@ export interface Project {
       title: "Sathichat",
       description: "Chat application made using Rocket.Chat and uses Jitsi Meet to enable video conference.",
       screenshots: [
-        "/halcyonashes/images/sathichat1.jpg",
-        "/halcyonashes/images/sathichat2.jpg",
+        "/images/sathichat1.jpg",
+        "/images/sathichat2.jpg",
         "",
         "",
       ],
@@ -59,8 +59,8 @@ export interface Project {
       title: "Karmakanda",
       description: "The app is designed to be a virtual priest and help you with rituals. Worked with SQLite, Firebase authentication, Retrofit, Exoplayer, and Calendars.",
       screenshots: [
-        "/halcyonashes/images/karmakanda1.png",
-        "/halcyonashes/images/karmakanda2.png",
+        "/images/karmakanda1.png",
+        "/images/karmakanda2.png",
         "",
         "",
       ],
