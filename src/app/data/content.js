@@ -6,14 +6,18 @@ const content = {
 Proficiency in: Kotlin, Java, Flutter, and Android SDK for Application Development.`,
     experience: "Experience",
     job1: {
+      title: "Flutter Developer, Geofinity Solutions",
+      years: "04/2025 - Present"
+    },
+    job2: {
       title: "Graduate Application Developer, University of Exeter",
       years: "06/2023 - 01/2025"
     },
-    job2: {
+    job3: {
         title: "Android Developer, Sajilo Ventures",
         years: "01/2019 - 04/2020"
       },
-    job3: {
+    job4: {
       title: "Android Developer, Longtail e-media",
       years: "06/2017 - 07/2018"
     },

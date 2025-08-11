@@ -45,7 +45,7 @@ export default function Home() {
             {content.experience}
           </h2>
           <ul className="space-y-6">
-            {[content.job1, content.job2, content.job3].map((job, index) => (
+            {[content.job1, content.job2, content.job3, content.job4].map((job, index) => (
               <li key={index} className="relative pl-6 border-l-2 border-blue-500">
                 <div className="job-header">
                   <h3 className="text-lg sm:text-xl font-medium text-gray-900 dark:text-white">
