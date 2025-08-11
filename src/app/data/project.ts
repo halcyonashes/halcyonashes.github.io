@@ -8,6 +8,17 @@ export interface Project {
   export const projects: Project[] = [
     {
       id: 1,
+      title: "Swinch",
+      description: "An app for tourists travelling around the globe. Made using Stacked (with Provider) architecture.",
+      screenshots: [
+        "/images/swinch1.jpeg",
+        "/images/swinch2.jpeg",
+        "/images/swinch3.jpeg",
+        "/images/swinch4.jpeg",
+      ],
+    },
+    {
+      id: 2,
       title: "MyExeter",
       description: "The app to support the students throughout their university journey. Extensively worked on login flow using AWS Cognito and Amplify, Firebase Analytics, Provider for state management, and error handling.",
       screenshots: [
@@ -27,7 +38,7 @@ export interface Project {
       ],
     },
     {
-      id: 3,
+      id: 4,
       title: "GoEntrance / Loksewa Pro/ MAN - Mathematical Association of Nepal",
       description: "Apps where you can enroll into different courses and practice test sets and take a test. Worked with charts, Room and ObjectBox for database, Android navigation components, image caching, Youtube API, and Firebase Crashlytics.",
       screenshots: [
@@ -38,13 +49,13 @@ export interface Project {
       ],
     },
     {
-      id: 4,
+      id: 5,
       title: "Sustain",
       description: "The app is designed to help with a healthcare research. The app was used by 4600 health facilities but due to the sensitive nature of data involved, it was distributed internally.",
       screenshots: [],
     },
     {
-      id: 5,
+      id: 6,
       title: "Sathichat",
       description: "Chat application made using Rocket.Chat and uses Jitsi Meet to enable video conference.",
       screenshots: [
@@ -55,7 +66,7 @@ export interface Project {
       ],
     },
     {
-      id: 6,
+      id: 7,
       title: "Karmakanda",
       description: "The app is designed to be a virtual priest and help you with rituals. Worked with SQLite, Firebase authentication, Retrofit, Exoplayer, and Calendars.",
       screenshots: [
@@ -66,7 +77,7 @@ export interface Project {
       ],
     },
     {
-      id: 7,
+      id: 8,
       title: "Event55",
       description: "Event management app with multiple themes enabled.",
       screenshots: [],
