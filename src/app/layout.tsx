@@ -1,5 +1,4 @@
 import { Inter } from "next/font/google"
-import { ThemeProvider } from "next-themes"
 import { cn } from "../../lib/utils"
 import "./globals.css"
 
@@ -16,11 +15,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={cn("min-h-screen bg-background font-sans antialiased", inter.className)}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          {children}
-        </ThemeProvider>
+    <html lang="en" className="dark">
+      <body className={cn("min-h-screen bg-slate-900 font-sans antialiased", inter.className)}>
+        {children}
       </body>
     </html>
   );
