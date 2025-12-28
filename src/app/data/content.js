@@ -32,7 +32,7 @@ Proficiency in: Kotlin, Java, Flutter, and Android SDK for Application Developme
       institution: "Tribhuvan University, 2019"
     },
     skills: "Skills",
-    skillsText: "Application Development | Kotlin | Java | Flutter | Python for Data Science | SQL database management | AWS | C | C++ | Django | Agile methodologies | Jira | Git Version Control | Data Visualisation | ReactJS | PHP | JavaScript | CSS | HTML5 | Postman | Wordpress",
+    skillsText: "Application Development | Kotlin | Java | Flutter | Python for Data Science | SQL database management | AWS | C | C++ | Django | Agile methodologies | Jira | Git Version Control | Data Visualisation | Docker | ReactJS | SvelteJS | FrappeJS | PHP | JavaScript | CSS | HTML5 | Postman | Wordpress",
     languages: "Languages",
     languageList1: ["Nepali - Native", "English - Fluent", "Spanish - Beginner"],
     languageList2: ["Newari - Native", "Hindi - Expert", "Japanese - Beginner"],

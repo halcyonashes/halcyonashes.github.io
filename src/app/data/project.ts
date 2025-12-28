@@ -8,6 +8,28 @@ export interface Project {
   export const projects: Project[] = [
     {
       id: 1,
+      title: "Derrapon",
+      description: "Crash detection application along with trip tracking and scoring features.",
+      screenshots: [
+        "/images/derrapon1.png",
+        "/images/derrapon2.png",
+        "/images/derrapon3.png",
+        "/images/derrapon4.png",
+      ],
+    },
+    {
+      id: 2,
+      title: "Retainly",
+      description: "Fuelshine application for merchants to reward greener choices for drivers.",
+      screenshots: [
+        "/images/fuelshine1.jpg",
+        "/images/fuelshine2.jpg",
+        "/images/fuelshine3.jpg",
+        "/images/fuelshine4.jpg",
+      ],
+    },
+    {
+      id: 3,
       title: "Swinch",
       description: "An app for tourists travelling around the globe. Made using Stacked (with Provider) architecture.",
       screenshots: [
@@ -18,7 +40,7 @@ export interface Project {
       ],
     },
     {
-      id: 2,
+      id: 4,
       title: "MyExeter",
       description: "The app to support the students throughout their university journey. Extensively worked on login flow using AWS Cognito and Amplify, Firebase Analytics, Provider for state management, and error handling.",
       screenshots: [
@@ -29,7 +51,7 @@ export interface Project {
       ],
     },
     {
-      id: 2,
+      id: 5,
       title: "Wi-fi Onboarding",
       description: "The web app helps the students connect to the university wi-fi developed using React with TypeScript.",
       screenshots: [
@@ -38,7 +60,7 @@ export interface Project {
       ],
     },
     {
-      id: 4,
+      id: 6,
       title: "GoEntrance / Loksewa Pro/ MAN - Mathematical Association of Nepal",
       description: "Apps where you can enroll into different courses and practice test sets and take a test. Worked with charts, Room and ObjectBox for database, Android navigation components, image caching, Youtube API, and Firebase Crashlytics.",
       screenshots: [
@@ -49,13 +71,13 @@ export interface Project {
       ],
     },
     {
-      id: 5,
+      id: 7,
       title: "Sustain",
       description: "The app is designed to help with a healthcare research. The app was used by 4600 health facilities but due to the sensitive nature of data involved, it was distributed internally.",
       screenshots: [],
     },
     {
-      id: 6,
+      id: 8,
       title: "Sathichat",
       description: "Chat application made using Rocket.Chat and uses Jitsi Meet to enable video conference.",
       screenshots: [
@@ -66,7 +88,7 @@ export interface Project {
       ],
     },
     {
-      id: 7,
+      id: 9,
       title: "Karmakanda",
       description: "The app is designed to be a virtual priest and help you with rituals. Worked with SQLite, Firebase authentication, Retrofit, Exoplayer, and Calendars.",
       screenshots: [
@@ -75,12 +97,6 @@ export interface Project {
         "",
         "",
       ],
-    },
-    {
-      id: 8,
-      title: "Event55",
-      description: "Event management app with multiple themes enabled.",
-      screenshots: [],
-    },
+    }
   ];
   
