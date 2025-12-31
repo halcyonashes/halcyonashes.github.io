@@ -20,8 +20,8 @@ const openSans = Open_Sans({
 // Navigation items
 const navItems = [
   { id: "summary", label: "Summary" },
-  { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
+  { id: "experience", label: "Experience" },
   { id: "education", label: "Education" },
   { id: "skills", label: "Skills" },
 ];
@@ -32,6 +32,12 @@ const AnimatedSection = ({ children, id, className }: { children: React.ReactNod
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    // Set visible immediately if IntersectionObserver isn't supported
+    if (!('IntersectionObserver' in window)) {
+      setIsVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -39,14 +45,22 @@ const AnimatedSection = ({ children, id, className }: { children: React.ReactNod
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+      { threshold: 0.05, rootMargin: "0px 0px 0px 0px" }
     );
 
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
 
-    return () => observer.disconnect();
+    // Fallback: make visible after a short delay if still not visible
+    const fallbackTimer = setTimeout(() => {
+      setIsVisible(true);
+    }, 500);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(fallbackTimer);
+    };
   }, []);
 
   return (
@@ -143,6 +157,20 @@ export default function Home() {
           </p>
         </AnimatedSection>
 
+        <AnimatedSection id="projects">
+          <h2 className="text-3xl sm:text-4xl font-semibold mb-6 text-blue-500 dark:text-blue-400 tracking-tight">
+            {content.projects}
+          </h2>
+          <div className="space-y-6">
+            {projects.map((project) => (
+              <Project
+                key={project.id}
+                project={project}
+              />
+            ))}
+          </div>
+        </AnimatedSection>
+
         <AnimatedSection id="experience">
           <h2 className="text-3xl sm:text-4xl font-semibold mb-6 text-blue-500 dark:text-blue-400 tracking-tight">
             {content.experience}
@@ -162,20 +190,6 @@ export default function Home() {
               </li>
             ))}
           </ul>
-        </AnimatedSection>
-
-        <AnimatedSection id="projects">
-          <h2 className="text-3xl sm:text-4xl font-semibold mb-6 text-blue-500 dark:text-blue-400 tracking-tight">
-            {content.projects}
-          </h2>
-          <div className="space-y-6">
-            {projects.map((project) => (
-              <Project
-                key={project.id}
-                project={project}
-              />
-            ))}
-          </div>
         </AnimatedSection>
 
         <AnimatedSection id="education">

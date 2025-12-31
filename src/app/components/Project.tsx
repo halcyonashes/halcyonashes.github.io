@@ -23,16 +23,15 @@ const Project = ({ project }: ProjectProps) => {
       </div>
       <div className="mt-3">
         <p className="text-slate-600 dark:text-slate-300 leading-relaxed">{project.description}</p>
-        <div
-          className="mt-4 grid gap-4"
-          style={{ gridTemplateColumns: `repeat(${getGridCols(project.screenshots.length)}, minmax(0, 1fr))` }}
-        >
-          {project.screenshots.map((screenshot: string, index: number) => (
-            screenshot && (
-              <ImageWithSpinner key={index} src={screenshot} index={index} />
-            )
-          ))}
-        </div>
+        {project.screenshots.length > 0 && (
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {project.screenshots.map((screenshot: string, index: number) => (
+              screenshot && (
+                <ImageWithSpinner key={index} src={screenshot} index={index} />
+              )
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
