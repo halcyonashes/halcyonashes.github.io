@@ -3,6 +3,10 @@ export interface Project {
     title: string;
     description: string;
     screenshots: string[];
+    playStoreLink?: string;
+    appStoreLink?: string;
+    webLink?: string;
+    type?: "web" | "mobile";
   }
   
   export const projects: Project[] = [
@@ -12,10 +16,11 @@ export interface Project {
       description: "Crash detection application along with trip tracking and scoring features.",
       screenshots: [
         "/images/derrapon1.png",
-        "/images/derrapon2.png",
-        "/images/derrapon3.png",
+        "/images/derrapon2.jpg",
+        "/images/derrapon3.jpg",
         "/images/derrapon4.png",
       ],
+      playStoreLink: "https://play.google.com/store/apps/details?id=com.derrapon.app",
     },
     {
       id: 2,
@@ -27,6 +32,7 @@ export interface Project {
         "/images/fuelshine3.jpg",
         "/images/fuelshine4.jpg",
       ],
+      playStoreLink: "https://play.google.com/store/apps/details?id=app.fuelshine.merchant",
     },
     {
       id: 3,
@@ -38,6 +44,7 @@ export interface Project {
         "/images/swinch3.jpeg",
         "/images/swinch4.jpeg",
       ],
+      playStoreLink: "https://play.google.com/store/apps/details?id=com.customer.swinch",
     },
     {
       id: 4,
@@ -49,18 +56,33 @@ export interface Project {
         "/images/myexeter3.jpg",
         "",
       ],
+      playStoreLink: "https://play.google.com/store/apps/details?id=uk.ac.exeter.MyExeter",
+      appStoreLink: "https://apps.apple.com/us/app/myexeter/id6499220718",
     },
     {
       id: 5,
+      title: "OptERP",
+      description: "App to help patients and doctors with appointment scheduling, medication management, and healthcare coordination.",
+      screenshots: [
+        "/images/opterp1.jpg",
+        "/images/opterp2.jpg",
+        "/images/opterp3.jpg",
+        "/images/opterp4.jpg",
+      ],
+      playStoreLink: "https://play.google.com/store/apps/details?id=app.geofinity.openerp",
+    },
+    {
+      id: 6,
       title: "Wi-fi Onboarding",
       description: "The web app helps the students connect to the university wi-fi developed using React with TypeScript.",
       screenshots: [
         "/images/wifi1.png",
         "/images/wifi2.png",
       ],
+      type: "web"
     },
     {
-      id: 6,
+      id: 7,
       title: "GoEntrance / Loksewa Pro/ MAN - Mathematical Association of Nepal",
       description: "Apps where you can enroll into different courses and practice test sets and take a test. Worked with charts, Room and ObjectBox for database, Android navigation components, image caching, Youtube API, and Firebase Crashlytics.",
       screenshots: [
@@ -71,13 +93,13 @@ export interface Project {
       ],
     },
     {
-      id: 7,
+      id: 8,
       title: "Sustain",
       description: "The app is designed to help with a healthcare research. The app was used by 4600 health facilities but due to the sensitive nature of data involved, it was distributed internally.",
       screenshots: [],
     },
     {
-      id: 8,
+      id: 9,
       title: "Sathichat",
       description: "Chat application made using Rocket.Chat and uses Jitsi Meet to enable video conference.",
       screenshots: [
@@ -88,7 +110,7 @@ export interface Project {
       ],
     },
     {
-      id: 9,
+      id: 10,
       title: "Karmakanda",
       description: "The app is designed to be a virtual priest and help you with rituals. Worked with SQLite, Firebase authentication, Retrofit, Exoplayer, and Calendars.",
       screenshots: [

@@ -3,6 +3,9 @@ import { Project as ProjectType } from "../data/project";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { TailSpin } from "react-loader-spinner";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faAndroid, faApple } from "@fortawesome/free-brands-svg-icons";
 import "./Project.css";
 
 interface ProjectProps {
@@ -20,11 +23,49 @@ const Project = ({ project }: ProjectProps) => {
     <div className="p-5 rounded-xl transition-all duration-300 ease-out bg-slate-100 dark:bg-slate-800/50 hover:bg-slate-200 dark:hover:bg-slate-800/70 shadow-md hover:shadow-xl hover:-translate-y-1 group">
       <div className="flex items-center justify-between mb-3">
         <h3 className="text-lg sm:text-xl font-semibold text-slate-900 dark:text-white group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors duration-200">{project.title}</h3>
+        <div className="flex items-center gap-3">
+          {project.playStoreLink && (
+            <a
+              href={project.playStoreLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 transition-colors duration-200"
+              aria-label={`View ${project.title} on Play Store`}
+              title="Play Store"
+            >
+              <FontAwesomeIcon icon={faAndroid} className="text-xl" />
+            </a>
+          )}
+          {project.appStoreLink && (
+            <a
+              href={project.appStoreLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
+              aria-label={`View ${project.title} on App Store`}
+              title="App Store"
+            >
+              <FontAwesomeIcon icon={faApple} className="text-xl" />
+            </a>
+          )}
+          {project.webLink && (
+            <a
+              href={project.webLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors duration-200"
+              aria-label={`Visit ${project.title} website`}
+              title="Website"
+            >
+              <FontAwesomeIcon icon={faGlobe} className="text-xl" />
+            </a>
+          )}
+        </div>
       </div>
       <div className="mt-3">
         <p className="text-slate-600 dark:text-slate-300 leading-relaxed">{project.description}</p>
         {project.screenshots.length > 0 && (
-          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className={project.type === "web" ? "mt-4 grid grid-cols-2 gap-6" : "mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"}>
             {project.screenshots.map((screenshot: string, index: number) => (
               screenshot && (
                 <ImageWithSpinner key={index} src={screenshot} index={index} />
