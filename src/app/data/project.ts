@@ -13,7 +13,7 @@ export interface Project {
     {
       id: 1,
       title: "Derrapon",
-      description: "Crash detection application along with trip tracking and scoring features.",
+      description: "Crash detection with trip tracking, scoring, WhatsApp alerts, and Stripe-based subscriptions.",
       screenshots: [
         "/images/derrapon1.png",
         "/images/derrapon2.jpg",
@@ -25,7 +25,7 @@ export interface Project {
     {
       id: 2,
       title: "Retainly",
-      description: "Fuelshine application for merchants to reward greener choices for drivers.",
+      description: "Merchant app with BLoC state management, dashboard charts, customer tracking, offer management, and point redemption scanner.",
       screenshots: [
         "/images/fuelshine1.jpg",
         "/images/fuelshine2.jpg",
@@ -37,7 +37,7 @@ export interface Project {
     {
       id: 3,
       title: "Swinch",
-      description: "An app for tourists travelling around the globe. Made using Stacked (with Provider) architecture.",
+      description: "Tourist app with customer and merchant sides. Features Stacked architecture, Payrexx payments, local attractions, coupons, OAuth sign-in, and cart-based orders.",
       screenshots: [
         "/images/swinch1.jpeg",
         "/images/swinch2.jpeg",
@@ -49,7 +49,7 @@ export interface Project {
     {
       id: 4,
       title: "MyExeter",
-      description: "The app to support the students throughout their university journey. Extensively worked on login flow using AWS Cognito and Amplify, Firebase Analytics, Provider for state management, and error handling.",
+      description: "University support app with attendance monitoring, timetable, events, and federated login using AWS Cognito and Firebase Analytics.",
       screenshots: [
         "/images/myexeter1.jpg",
         "/images/myexeter2.jpg",
@@ -62,7 +62,7 @@ export interface Project {
     {
       id: 5,
       title: "OptERP",
-      description: "App to help patients and doctors with appointment scheduling, medication management, and healthcare coordination.",
+      description: "Healthcare app with local medication reminders, report downloads, and appointment booking.",
       screenshots: [
         "/images/opterp1.jpg",
         "/images/opterp2.jpg",
@@ -74,7 +74,7 @@ export interface Project {
     {
       id: 6,
       title: "Wi-fi Onboarding",
-      description: "The web app helps the students connect to the university wi-fi developed using React with TypeScript.",
+      description: "University Wi-Fi onboarding web app built with React and TypeScript.",
       screenshots: [
         "/images/wifi1.png",
         "/images/wifi2.png",
@@ -84,7 +84,7 @@ export interface Project {
     {
       id: 7,
       title: "GoEntrance / Loksewa Pro/ MAN - Mathematical Association of Nepal",
-      description: "Apps where you can enroll into different courses and practice test sets and take a test. Worked with charts, Room and ObjectBox for database, Android navigation components, image caching, Youtube API, and Firebase Crashlytics.",
+      description: "Test prep apps with course enrollment, practice tests, charts, Room/ObjectBox database, image caching, YouTube API, and Firebase Crashlytics.",
       screenshots: [
         "/images/man1.jpg",
         "/images/loksewa2.jpg",
@@ -101,7 +101,7 @@ export interface Project {
     {
       id: 9,
       title: "Sathichat",
-      description: "Chat application made using Rocket.Chat and uses Jitsi Meet to enable video conference.",
+      description: "Chat app built with Rocket.Chat and Jitsi Meet integration for video conferencing.",
       screenshots: [
         "/images/sathichat1.jpg",
         "/images/sathichat2.jpg",
@@ -112,7 +112,7 @@ export interface Project {
     {
       id: 10,
       title: "Karmakanda",
-      description: "The app is designed to be a virtual priest and help you with rituals. Worked with SQLite, Firebase authentication, Retrofit, Exoplayer, and Calendars.",
+      description: "Virtual priest app with ritual guidance, local notifications, SQLite database, Firebase auth, video playback, and calendar integration.",
       screenshots: [
         "/images/karmakanda1.png",
         "/images/karmakanda2.png",
