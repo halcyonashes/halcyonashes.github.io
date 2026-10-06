@@ -153,7 +153,7 @@ export default function Home() {
         <span>© {new Date().getFullYear()} {content.title}</span>
         <span className="flex items-center gap-4">
           <a
-            href="https://github.com/halcyonashes/halcyonashes"
+            href="https://github.com/halcyonashes/halcyonashes.github.io"
             target="_blank"
             rel="noopener noreferrer"
             className="link inline-block py-1"
