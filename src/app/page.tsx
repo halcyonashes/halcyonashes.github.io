@@ -3,7 +3,7 @@ import { projects } from "./data/project";
 import Project from "./components/Project";
 import SectionNav from "./components/SectionNav";
 import ThemeToggle from "./components/ThemeToggle";
-import content from "./data/content";
+import content from "./data/content.json";
 
 const navItems = [
   { id: "projects", label: "Projects" },
@@ -12,9 +12,7 @@ const navItems = [
   { id: "skills", label: "Skills" },
 ];
 
-const jobs = [content.job1, content.job2, content.job3, content.job4];
-const degrees = [content.degree1, content.degree2];
-const languages = [...content.languageList1, ...content.languageList2];
+const { jobs, degrees, languageList: languages } = content;
 
 // "Role, Company" -> ["Role", "Company"]
 const splitFirst = (text: string): [string, string] => {
@@ -33,7 +31,7 @@ const stagger = (i: number) => ({ "--i": i }) as CSSProperties;
 const sectionLabel = "mb-6 font-mono text-sm font-normal text-fg-muted";
 
 export default function Home() {
-  const [currentRole, currentCompany] = splitFirst(content.job1.title);
+  const [currentRole, currentCompany] = splitFirst(jobs[0]?.title ?? "");
 
   return (
     <>
@@ -80,7 +78,7 @@ export default function Home() {
           <h2 id="projects-title" className={sectionLabel}>{content.projects}</h2>
           <ul>
             {projects.map((project) => (
-              <Project key={project.id} project={project} />
+              <Project key={project.title} project={project} />
             ))}
           </ul>
         </section>

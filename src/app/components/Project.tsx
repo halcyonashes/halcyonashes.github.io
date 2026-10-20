@@ -5,8 +5,13 @@ interface ProjectProps {
   project: ProjectType;
 }
 
+// Used when a screenshot has no width/height set in the CMS.
+const DEFAULT_WEB_SIZE = { width: 1920, height: 968 };
+const DEFAULT_MOBILE_SIZE = { width: 1080, height: 2400 };
+
 const Project = ({ project }: ProjectProps) => {
   const isWeb = project.type === "web";
+  const defaultSize = isWeb ? DEFAULT_WEB_SIZE : DEFAULT_MOBILE_SIZE;
   const links = [
     { href: project.playStoreLink, label: "Play Store" },
     { href: project.appStoreLink, label: "App Store" },
@@ -49,8 +54,8 @@ const Project = ({ project }: ProjectProps) => {
                 <Image
                   src={shot.src}
                   alt={`${project.title} screenshot ${index + 1}`}
-                  width={shot.width}
-                  height={shot.height}
+                  width={shot.width || defaultSize.width}
+                  height={shot.height || defaultSize.height}
                   loading="lazy"
                   className="h-auto w-full rounded border border-border bg-bg-subtle"
                 />

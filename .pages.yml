@@ -1,0 +1,122 @@
+media:
+  input: public/images
+  output: /images
+
+content:
+  - name: projects
+    label: Projects
+    type: file
+    path: src/app/data/projects.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        type: string
+        required: true
+      - name: description
+        type: text
+        required: true
+      - name: type
+        type: select
+        description: Web uses a wide screenshot layout. Empty means mobile.
+        options:
+          values: [mobile, web]
+      - name: playStoreLink
+        label: Play Store link
+        type: string
+      - name: appStoreLink
+        label: App Store link
+        type: string
+      - name: webLink
+        label: Website link
+        type: string
+      - name: screenshots
+        type: object
+        list: true
+        fields:
+          - name: src
+            label: Image
+            type: image
+            required: true
+          - name: width
+            type: number
+            description: Pixel width. Leave empty for the default (1080 mobile, 1920 web).
+          - name: height
+            type: number
+            description: Pixel height. Leave empty for the default (2400 mobile, 968 web).
+
+  - name: content
+    label: Profile
+    type: file
+    path: src/app/data/content.json
+    format: json
+    fields:
+      - name: title
+        label: Name
+        type: string
+        required: true
+      - name: summaryText
+        label: Summary
+        type: text
+      - name: jobs
+        label: Experience
+        type: object
+        list: true
+        fields:
+          - name: title
+            type: string
+            description: "Role, Company — the first job is shown as your current role."
+            required: true
+          - name: years
+            type: string
+            description: "e.g. 04/2025 - Present"
+      - name: degrees
+        label: Education
+        type: object
+        list: true
+        fields:
+          - name: title
+            type: string
+            required: true
+          - name: institution
+            type: string
+            description: "Institution, Year"
+      - name: skillsText
+        label: Skills
+        type: text
+        description: Separate with " | "
+      - name: languageList
+        label: Languages
+        type: string
+        list: true
+      - name: researchInterestsText
+        label: Research interests
+        type: text
+        description: Separate with " | "
+      - name: githubUrl
+        label: GitHub URL
+        type: string
+      - name: linkedinUrl
+        label: LinkedIn URL
+        type: string
+      - name: summary
+        type: string
+        hidden: true
+      - name: experience
+        type: string
+        hidden: true
+      - name: projects
+        type: string
+        hidden: true
+      - name: education
+        type: string
+        hidden: true
+      - name: skills
+        type: string
+        hidden: true
+      - name: languages
+        type: string
+        hidden: true
+      - name: researchInterests
+        type: string
+        hidden: true
