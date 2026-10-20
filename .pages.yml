@@ -65,7 +65,7 @@ content:
         fields:
           - name: title
             type: string
-            description: "Role, Company — the first job is shown as your current role."
+            description: "Role, Company"
             required: true
           - name: years
             type: string

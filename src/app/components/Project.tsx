@@ -1,3 +1,5 @@
+"use client";
+import { useId, useState } from "react";
 import Image from "next/image";
 import { Project as ProjectType } from "../data/project";
 
@@ -8,10 +10,15 @@ interface ProjectProps {
 // Used when a screenshot has no width/height set in the CMS.
 const DEFAULT_WEB_SIZE = { width: 1920, height: 968 };
 const DEFAULT_MOBILE_SIZE = { width: 1080, height: 2400 };
+const PREVIEW_COUNT = 4;
 
 const Project = ({ project }: ProjectProps) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const galleryId = useId();
   const isWeb = project.type === "web";
   const screenshots = project.screenshots ?? [];
+  const previews = screenshots.slice(0, PREVIEW_COUNT);
+  const hiddenCount = screenshots.length - previews.length;
   const defaultSize = isWeb ? DEFAULT_WEB_SIZE : DEFAULT_MOBILE_SIZE;
   const links = [
     { href: project.playStoreLink, label: "Play Store" },
@@ -42,28 +49,70 @@ const Project = ({ project }: ProjectProps) => {
       </div>
       <p className="mt-2 max-w-[65ch] text-fg-muted">{project.description}</p>
       {screenshots.length > 0 && (
-        <ul className={isWeb ? "mt-6 grid gap-4" : "mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4"}>
-          {screenshots.map((shot, index) => (
-            <li key={shot.src}>
-              <a
-                href={shot.src}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-                aria-label={`Open ${project.title} screenshot ${index + 1} at full size`}
-              >
-                <Image
-                  src={shot.src}
-                  alt={`${project.title} screenshot ${index + 1}`}
-                  width={shot.width || defaultSize.width}
-                  height={shot.height || defaultSize.height}
-                  loading="lazy"
-                  className="h-auto w-full rounded border border-border bg-bg-subtle"
-                />
-              </a>
-            </li>
-          ))}
-        </ul>
+        <>
+          {!isExpanded && (
+            <ul className="mt-4 flex items-end gap-2">
+              {previews.map((shot) => (
+                <li key={shot.src}>
+                  <button
+                    type="button"
+                    onClick={() => setIsExpanded(true)}
+                    className="block"
+                    aria-label={`Show ${project.title} screenshots`}
+                  >
+                    <Image
+                      src={shot.src}
+                      alt=""
+                      width={shot.width || defaultSize.width}
+                      height={shot.height || defaultSize.height}
+                      loading="lazy"
+                      className={`w-auto rounded border border-border bg-bg-subtle ${isWeb ? "h-20" : "h-28"}`}
+                    />
+                  </button>
+                </li>
+              ))}
+              {hiddenCount > 0 && (
+                <li className="font-mono text-xs text-fg-faint">+{hiddenCount}</li>
+              )}
+            </ul>
+          )}
+          <button
+            type="button"
+            onClick={() => setIsExpanded((open) => !open)}
+            aria-expanded={isExpanded}
+            aria-controls={galleryId}
+            className="link mt-3 inline-block py-1 text-sm text-fg-muted"
+          >
+            {isExpanded ? "Hide screenshots" : `Show screenshots (${screenshots.length})`}
+          </button>
+          <ul
+            id={galleryId}
+            hidden={!isExpanded}
+            className={isWeb ? "mt-4 grid gap-4" : "mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4"}
+          >
+            {isExpanded &&
+              screenshots.map((shot, index) => (
+                <li key={shot.src}>
+                  <a
+                    href={shot.src}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                    aria-label={`Open ${project.title} screenshot ${index + 1} at full size`}
+                  >
+                    <Image
+                      src={shot.src}
+                      alt={`${project.title} screenshot ${index + 1}`}
+                      width={shot.width || defaultSize.width}
+                      height={shot.height || defaultSize.height}
+                      loading="lazy"
+                      className="h-auto w-full rounded border border-border bg-bg-subtle"
+                    />
+                  </a>
+                </li>
+              ))}
+          </ul>
+        </>
       )}
     </li>
   );
