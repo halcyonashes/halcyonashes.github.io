@@ -2,105 +2,216 @@
   {
     "title": "Derrapon",
     "description": "Crash detection with trip tracking, scoring, WhatsApp alerts, and Stripe-based subscriptions.",
+    "playStoreLink": "https://play.google.com/store/apps/details?id=com.derrapon.app",
     "screenshots": [
-      { "src": "/images/derrapon1.png", "width": 414, "height": 920 },
-      { "src": "/images/derrapon2.jpg", "width": 1080, "height": 2400 },
-      { "src": "/images/derrapon3.jpg", "width": 1080, "height": 2400 },
-      { "src": "/images/derrapon4.png", "width": 417, "height": 923 }
-    ],
-    "playStoreLink": "https://play.google.com/store/apps/details?id=com.derrapon.app"
+      {
+        "src": "/images/derrapon1.png",
+        "width": 414,
+        "height": 920
+      },
+      {
+        "src": "/images/derrapon2.jpg",
+        "width": 1080,
+        "height": 2400
+      },
+      {
+        "src": "/images/derrapon3.jpg",
+        "width": 1080,
+        "height": 2400
+      },
+      {
+        "src": "/images/derrapon4.png",
+        "width": 417,
+        "height": 923
+      }
+    ]
   },
   {
     "title": "Minimala",
     "description": "Minimalistic launcher app for Android built with Kotlin.",
     "screenshots": [
-      { "src": "/images/minimala_1.jpg", "width": 1080, "height": 2400 },
-      { "src": "/images/minimala_2.jpg", "width": 1080, "height": 2400 },
-      { "src": "/images/minimala_3.jpg", "width": 1080, "height": 2400 }
+      {
+        "src": "/images/minimala_1.jpg",
+        "width": 1080,
+        "height": 2400
+      },
+      {
+        "src": "/images/minimala_2.jpg",
+        "width": 1080,
+        "height": 2400
+      },
+      {
+        "src": "/images/minimala_3.jpg",
+        "width": 1080,
+        "height": 2400
+      }
     ]
   },
   {
     "title": "Retainly",
     "description": "Merchant app with BLoC state management, dashboard charts, customer tracking, offer management, and point redemption scanner.",
+    "playStoreLink": "https://play.google.com/store/apps/details?id=app.fuelshine.merchant",
     "screenshots": [
-      { "src": "/images/fuelshine1.jpg", "width": 1080, "height": 2400 },
-      { "src": "/images/fuelshine2.jpg", "width": 1080, "height": 2400 },
-      { "src": "/images/fuelshine3.jpg", "width": 1080, "height": 2400 },
-      { "src": "/images/fuelshine4.jpg", "width": 1080, "height": 2400 }
-    ],
-    "playStoreLink": "https://play.google.com/store/apps/details?id=app.fuelshine.merchant"
+      {
+        "src": "/images/fuelshine1.jpg",
+        "width": 1080,
+        "height": 2400
+      },
+      {
+        "src": "/images/fuelshine2.jpg",
+        "width": 1080,
+        "height": 2400
+      },
+      {
+        "src": "/images/fuelshine3.jpg",
+        "width": 1080,
+        "height": 2400
+      },
+      {
+        "src": "/images/fuelshine4.jpg",
+        "width": 1080,
+        "height": 2400
+      }
+    ]
   },
   {
     "title": "Swinch",
     "description": "Tourist app with customer and merchant sides. Features Stacked architecture, Payrexx payments, local attractions, coupons, OAuth sign-in, and cart-based orders.",
+    "playStoreLink": "https://play.google.com/store/apps/details?id=com.customer.swinch",
     "screenshots": [
-      { "src": "/images/swinch1.jpeg", "width": 720, "height": 1600 },
-      { "src": "/images/swinch2.jpeg", "width": 720, "height": 1600 },
-      { "src": "/images/swinch3.jpeg", "width": 720, "height": 1600 },
-      { "src": "/images/swinch4.jpeg", "width": 720, "height": 1600 }
-    ],
-    "playStoreLink": "https://play.google.com/store/apps/details?id=com.customer.swinch"
+      {
+        "src": "/images/swinch1.jpeg",
+        "width": 720,
+        "height": 1600
+      },
+      {
+        "src": "/images/swinch2.jpeg",
+        "width": 720,
+        "height": 1600
+      },
+      {
+        "src": "/images/swinch3.jpeg",
+        "width": 720,
+        "height": 1600
+      },
+      {
+        "src": "/images/swinch4.jpeg",
+        "width": 720,
+        "height": 1600
+      }
+    ]
   },
   {
     "title": "MyExeter",
     "description": "University support app with attendance monitoring, timetable, events, and federated login using AWS Cognito and Firebase Analytics.",
-    "screenshots": [
-      { "src": "/images/myexeter1.jpg", "width": 729, "height": 1421 },
-      { "src": "/images/myexeter2.jpg", "width": 727, "height": 1415 },
-      { "src": "/images/myexeter3.jpg", "width": 727, "height": 1413 }
-    ],
     "playStoreLink": "https://play.google.com/store/apps/details?id=uk.ac.exeter.MyExeter",
-    "appStoreLink": "https://apps.apple.com/us/app/myexeter/id6499220718"
+    "appStoreLink": "https://apps.apple.com/us/app/myexeter/id6499220718",
+    "screenshots": [
+      {
+        "src": "/images/myexeter1.jpg",
+        "width": 729,
+        "height": 1421
+      },
+      {
+        "src": "/images/myexeter2.jpg",
+        "width": 727,
+        "height": 1415
+      },
+      {
+        "src": "/images/myexeter3.jpg",
+        "width": 727,
+        "height": 1413
+      }
+    ]
   },
   {
     "title": "OptERP",
     "description": "Healthcare app with local medication reminders, report downloads, and appointment booking.",
+    "playStoreLink": "https://play.google.com/store/apps/details?id=app.geofinity.openerp",
     "screenshots": [
-      { "src": "/images/opterp1.jpg", "width": 1080, "height": 2400 },
-      { "src": "/images/opterp2.jpg", "width": 1080, "height": 2400 },
-      { "src": "/images/opterp3.jpg", "width": 1080, "height": 2400 },
-      { "src": "/images/opterp4.jpg", "width": 1080, "height": 2400 }
-    ],
-    "playStoreLink": "https://play.google.com/store/apps/details?id=app.geofinity.openerp"
+      {
+        "src": "/images/opterp1.jpg",
+        "width": 1080,
+        "height": 2400
+      },
+      {
+        "src": "/images/opterp2.jpg",
+        "width": 1080,
+        "height": 2400
+      },
+      {
+        "src": "/images/opterp3.jpg",
+        "width": 1080,
+        "height": 2400
+      },
+      {
+        "src": "/images/opterp4.jpg",
+        "width": 1080,
+        "height": 2400
+      }
+    ]
   },
   {
     "title": "Wi-fi Onboarding",
     "description": "University Wi-Fi onboarding web app built with React and TypeScript.",
+    "type": "web",
     "screenshots": [
-      { "src": "/images/wifi1.png", "width": 1920, "height": 968 },
-      { "src": "/images/wifi2.png", "width": 1920, "height": 968 }
-    ],
-    "type": "web"
+      {
+        "src": "/images/wifi1.png",
+        "width": 1920,
+        "height": 968
+      },
+      {
+        "src": "/images/wifi2.png",
+        "width": 1920,
+        "height": 968
+      }
+    ]
   },
   {
     "title": "GoEntrance / Loksewa Pro/ MAN - Mathematical Association of Nepal",
     "description": "Test prep apps with course enrollment, practice tests, charts, Room/ObjectBox database, image caching, YouTube API, and Firebase Crashlytics.",
     "screenshots": [
-      { "src": "/images/man1.jpg", "width": 1043, "height": 1847 },
-      { "src": "/images/loksewa2.jpg", "width": 1080, "height": 1920 },
-      { "src": "/images/loksewa1.jpg", "width": 1080, "height": 1920 },
-      { "src": "/images/goentrance1.jpg", "width": 1080, "height": 1920 }
+      {
+        "src": "/images/man1.jpg",
+        "width": 1043,
+        "height": 1847
+      },
+      {
+        "src": "/images/loksewa2.jpg",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "src": "/images/loksewa1.jpg",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "src": "/images/goentrance1.jpg",
+        "width": 1080,
+        "height": 1920
+      }
     ]
   },
   {
     "title": "Sustain",
-    "description": "The app is designed to help with a healthcare research. The app was used by 4600 health facilities but due to the sensitive nature of data involved, it was distributed internally.",
-    "screenshots": []
-  },
-  {
-    "title": "Sathichat",
-    "description": "Chat app built with Rocket.Chat and Jitsi Meet integration for video conferencing.",
-    "screenshots": [
-      { "src": "/images/sathichat1.jpg", "width": 800, "height": 1280 },
-      { "src": "/images/sathichat2.jpg", "width": 800, "height": 1280 }
-    ]
+    "description": "The app is designed to help with a healthcare research. The app was used by 4600 health facilities but due to the sensitive nature of data involved, it was distributed internally."
   },
   {
     "title": "Karmakanda",
     "description": "Virtual priest app with ritual guidance, local notifications, SQLite database, Firebase auth, video playback, and calendar integration.",
     "screenshots": [
-      { "src": "/images/karmakanda1.png", "width": 1080, "height": 1920 },
-      { "src": "/images/karmakanda2.png", "width": 1080, "height": 1920 }
+      {
+        "src": "/images/karmakanda1.png",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "src": "/images/karmakanda2.png",
+        "width": 1080,
+        "height": 1920
+      }
     ]
   }
 ]
