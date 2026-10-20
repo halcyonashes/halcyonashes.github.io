@@ -11,7 +11,8 @@ export interface Screenshot {
   export interface Project {
     title: string;
     description: string;
-    screenshots: Screenshot[];
+    // Pages CMS omits the key entirely when a project has no images.
+    screenshots?: Screenshot[];
     playStoreLink?: string;
     appStoreLink?: string;
     webLink?: string;

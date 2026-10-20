@@ -11,6 +11,7 @@ const DEFAULT_MOBILE_SIZE = { width: 1080, height: 2400 };
 
 const Project = ({ project }: ProjectProps) => {
   const isWeb = project.type === "web";
+  const screenshots = project.screenshots ?? [];
   const defaultSize = isWeb ? DEFAULT_WEB_SIZE : DEFAULT_MOBILE_SIZE;
   const links = [
     { href: project.playStoreLink, label: "Play Store" },
@@ -40,9 +41,9 @@ const Project = ({ project }: ProjectProps) => {
         )}
       </div>
       <p className="mt-2 max-w-[65ch] text-fg-muted">{project.description}</p>
-      {project.screenshots.length > 0 && (
+      {screenshots.length > 0 && (
         <ul className={isWeb ? "mt-6 grid gap-4" : "mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4"}>
-          {project.screenshots.map((shot, index) => (
+          {screenshots.map((shot, index) => (
             <li key={shot.src}>
               <a
                 href={shot.src}
